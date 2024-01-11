@@ -19,7 +19,7 @@
       </div>
       <div class="form-buttons">
         <div class="form-politic">
-          <input type="checkbox">
+          <input type="checkbox" v-model="isPolitic">
           <span>Согласие на обработку персональных данных</span>
         </div>
         <button class="form-submit" @click="completed">
@@ -43,18 +43,21 @@ export default {
       what:"",
       where:"",
       number:"",
-      isComplete:false
+      isComplete:false,
+      isPolitic:false
     }
   },
   methods:{
     completed(){
-      this.isComplete = true
-      this.what = ""
-      this.where = ""
-      this.number = ""
-      setTimeout(()=>{
-        this.isComplete = false
-      }, 1000)
+      if (this.isPolitic){
+        this.isComplete = true
+        this.what = ""
+        this.where = ""
+        this.number = ""
+        setTimeout(()=>{
+          this.isComplete = false
+        }, 1000)
+      }
     }
   }
 
