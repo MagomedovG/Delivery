@@ -5,8 +5,8 @@
       <p style="color: #C7C7C7">{{title}}</p>
       <div class="calculate">
         <button @click="minus" class="calc-button"><img src="/minus.svg" alt=""></button>
-<!--        <input type="text" :value="number" @change="$emit('number', $event.target.value)">-->
-        <p>{{number}} {{edinica}}</p>
+        <input v-model="number" type="text" @change="$emit('number', number)" @input="onInput">
+        <p>{{edinica}}</p>
         <button @click="plus" class="calc-button"><img src="/plus.svg" alt=""></button>
       </div>
 
@@ -34,6 +34,9 @@ export default {
     minus(){
       this.number-=1
       this.$emit('number', this.number);
+    },
+    onInput(event) {
+      this.number = event.target.value.replace(/[^0-9]/g, '');
     }
   },
   mounted() {

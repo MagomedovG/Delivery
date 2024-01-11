@@ -17,10 +17,10 @@
             <img src="/calc.svg" alt="">
             <span>Калькулятор</span>
           </nuxt-link>
-          <button style="display: flex; background-color: rgba(1,1,1,0)" class="login">
-            <img src="/login.svg" alt="">
-            <span>Вход</span>
-          </button>
+<!--          <button style="display: flex; background-color: rgba(1,1,1,0)" class="login">-->
+<!--            <img src="/login.svg" alt="">-->
+<!--            <span>Вход</span>-->
+<!--          </button>-->
         </div>
       </div>
     </page-section>
@@ -79,7 +79,7 @@ export default {
   width: 40%;
 }
 .header-group{
-  justify-content: inherit;
+  justify-content: flex-end;
   gap: 20px;
   width: 27%;
 }
