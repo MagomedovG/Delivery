@@ -5,7 +5,7 @@
       <p style="color: #C7C7C7">{{title}}</p>
       <div class="calculate">
         <button @click="minus" class="calc-button"><img src="/minus.svg" alt=""></button>
-        <input v-model="number" type="text" @change="$emit('number', number)" @input="onInput">
+        <input style="width: 15%" v-model.number="number" type="text" @change="$emit('number', number)" @input="onInput">
         <p>{{edinica}}</p>
         <button @click="plus" class="calc-button"><img src="/plus.svg" alt=""></button>
       </div>
@@ -55,6 +55,7 @@ export default {
 .calculate{
   flex-direction: row;
   gap: 3px;
+  align-items: center;
 }
 .calc-button{
   border: none;

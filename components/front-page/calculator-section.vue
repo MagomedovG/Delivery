@@ -54,6 +54,9 @@
     <div v-if="result" class="calculator-result">
       <p>Доставка обойдется вам в {{Math.round(price)}} рублей</p>
       <button @click="result=false" style="color:black;position: absolute; right: 15px;top: 15px; border: none;background-color: rgba(0,0,0,0)">X</button>
+      <nuxt-link to="#form" class="form-submit" @click="result=false">
+        Оставить заявку
+      </nuxt-link>
     </div>
   </div>
 </template>
@@ -255,5 +258,14 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.form-submit{
+  padding: 18px 22px;
+  background-color: rgba(255, 210, 0, 1);
+  border: 0;
+  border-radius: 12px;
+  text-decoration: none;
+  color:black;
+  margin-top:80px;
 }
 </style>

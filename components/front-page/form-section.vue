@@ -1,5 +1,5 @@
 <template>
-  <div class="form-section">
+  <div class="form-section" id="form">
     <page-section>
       <p>Нет времени разбираться?</p>
       <p>Подскажем!</p>
